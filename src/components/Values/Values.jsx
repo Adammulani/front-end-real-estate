@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     Accordion,
     AccordionItem,
@@ -14,6 +14,14 @@ import {
  import data from "../../utils/accordion";
 
 export const Values = () => {
+  const [className,setClassName]=useState("collapsed");
+
+  const changeHandler=(expand)=>{
+          setClassName(expand?"expanded":"collapsed")
+  }
+
+
+
   return (
     <section className="v-wrapper">
       <div className="paddings innerWidth flexCenter v-container">
@@ -35,19 +43,17 @@ export const Values = () => {
             className='accordion'
             allowMultipleExpanded={false}
             preExpanded={[0]}   
+            onChange={changeHandler}
             > {/*preExpanded={[0]} means first element will be expanded by default */}
 
             { 
               data.map((item,i)=>{
-                const [className,setClassName]=useState(null);
+               
                 return (
                     <AccordionItem className={`accordionItem ${className}`} key={i} uuid={i}>
                         <AccordionItemHeading>
                             <AccordionItemButton className=' flexCenter accordionButton'>
-                                
-                                <AccordionItemState>
-                                    {({expanded})=> expanded ? setClassName("expanded"):setClassName("collapsed")}
-                                </AccordionItemState>
+                               
                                 <div className="flexCenter icon">
                                     {item.icon}
                                 </div>
