@@ -66,11 +66,53 @@ a {
   justify-content: center;
   align-items: flex-end;
 }
-
+.hero-title>h1{
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 4rem;
+}
 .primaryText {
   color: #1f3e72;
   font-weight: bold;
   font-size: 2rem;
+}
+.hero-left{
+  gap:3rem;
+}
+
+.orange-circle{
+  height: 4rem;
+  width: 4rem;
+  background: var(--orange-gradient);
+  border-radius: 999px;
+  position: absolute;
+  right: 47%;
+  top: -10%;
+  z-index: -1;
+ 
+}
+
+.search-bar{
+  background-color: white;
+  border-radius: 5px;
+  border:rgb(120, 120,120,0.374);
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.search-bar>input{
+  border: none;
+  outline: none;
+}
+
+.hero-title{
+  position: relative;
+  z-index: 1;
+}
+
+.wrap-it{
+  text-wrap: wrap;
 }
 
 .secondaryText {
