@@ -35,7 +35,7 @@ export const Values = () => {
         <div className="flexColStart v-right">
           <span className='greenText'>Our Promise to You</span>
           <span className='primaryText'>Why Choose Us</span>
-          <span className='secondaryText'>Discover the value of partnership with Aaaaam, where our dedicated <br/>
+          <span className='secondaryText'>Discover the value of partnership with us, where our dedicated <br/>
             team works tirelessly to help you achieve your real estate goals with <br/>
             confidence and peace of mind</span>
 
